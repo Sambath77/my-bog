@@ -21,9 +21,6 @@ const withDB = async (operations, res) => {
   }
 };
 
-// app.get('/hello', (req, res) => res.send('Hello!'));
-// app.get('/hello/:name', (req, res) => res.send(`Hello ${req.params.name}`));
-// app.post('/hello', (req, res) => res.send(`Hello! ${req.body.name}`));
 app.get('/api/articles/:name', async (req, res) => {
   withDB(async (db) => {
     const articleName = req.params.name;
