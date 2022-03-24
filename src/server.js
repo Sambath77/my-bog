@@ -3,20 +3,7 @@ import bodyParser from 'body-parser';
 import { MongoClient } from 'mongodb';
 import path from 'path';
 import { ppid } from 'process';
-// const articlesInfo = {
-//   'learn-react': {
-//     upvotes: 0,
-//     comments: [],
-//   },
-//   'learn-node': {
-//     upvotes: 0,
-//     comments: [],
-//   },
-//   'my-thoughts-on-resumes': {
-//     upvotes: 0,
-//     comments: [],
-//   },
-// };
+
 const app = express();
 app.use(express.static(path.join(__dirname, '/build')));
 app.use(bodyParser.json());
